@@ -21,7 +21,7 @@ namespace Testonadd
             // IWebElement drpProdotti = driver.FindElement(By.CssSelector("#pa_compatibilita>option:nth-child(2)"));
 
             Thread.Sleep(20000);
-            //add a option present in a select element 
+            //add a present options in a select  
             for (int i=1; i< 5; i++)
             {
                 IWebElement drpProdotti = driver.FindElement(By.CssSelector("#pa_compatibilita>option:nth-child(" + i + ")"));
@@ -30,6 +30,15 @@ namespace Testonadd
                     Console.WriteLine("L'elemento nella selezione in posizione: " + i + " con valore: " + drpProdotti.GetAttribute("value"));
                 }
             }
+
+            // real selected value 
+            IWebElement selectedProdut = driver.FindElement(By.CssSelector(("#pa_compatibilita")));
+
+            Console.WriteLine("l'elemento selezionato è: " + selectedProdut.GetAttribute("value"));
+
+
+
+            
             
 
 
